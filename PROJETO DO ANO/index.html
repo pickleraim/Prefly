@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Museu de Objetos Inúteis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Museu das Coisas mais Inúteis já criadas pela Humanidade</h1>
+    <p>Um museu digital das coisas mais sem propósito que já foram criadas pelo ser Humano.</p>
+  </header>
+
+  <main>
+    <section class="busca-section">
+      <input type="text" id="pesquisa" placeholder="Pesquisar objeto inútil..." />
+      <div class="contador-e-botao">
+        <h2 id="contadorObjetos">Objetos inúteis encontrados: 0</h2>
+        <button id="abrirModalBtn" class="btn-criar-objeto">+ Criar Objeto</button>
+      </div>
+    </section>
+
+    <div id="listaObjetos"></div>
+    <button id="mostrarMaisBtn" class="btn-mostrar-mais" style="display: none;">Mostrar mais</button>
+  </main>
+
+  <div id="destaque" class="destaque-container" style="display: none">
+    <div class="destaque-card">
+      <h2 id="destaqueTitulo"></h2>
+      <img id="destaqueImagem" />
+      <p id="destaqueDescricao"></p>
+      <p id="destaqueCriador"></p>
+      <button onclick="fecharDestaque()">Fechar</button>
+    </div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="fecharModalBtn">&times;</span>
+      <h2>Adicionar novo objeto inútil</h2>
+      <form id="objetoForm">
+        <input type="text" id="nome" placeholder="Nome do objeto" required />
+        <textarea id="descricao" placeholder="Descrição inútil" required></textarea>
+        <input type="url" id="imagem" placeholder="URL da imagem" required />
+        <button type="submit">Adicionar Objeto</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Sala de Objetos Inúteis. Todos os direitos reservados Antônio Pickler Marcos.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
